@@ -669,7 +669,20 @@ body.nav-active {
   object-fit: contain;
   border-radius: 5px;
 }
+@media (max-width: 767px) { /* For screens smaller than 768px */
+  .modal-content {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    max-width: none;
+    max-height: none;
+    border-radius: 0;
+  }
 
+  .modal-image {
+    max-height: calc(100vh - 120px); /* Adjust the value as needed */
+  }
+}
 /*-----------------------------------*\
   #PROJECTS
 \*-----------------------------------*/
