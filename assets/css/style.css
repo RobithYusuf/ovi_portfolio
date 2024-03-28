@@ -590,7 +590,7 @@ body.nav-active {
 
 /* == */
 
-.card-icon {
+.card-icon-certificate {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -602,7 +602,7 @@ body.nav-active {
   z-index: 1;
 }
 
-.certificate-card:hover .card-icon {
+.certificate-card:hover .card-icon-certificate {
   opacity: 1;
 }
 
