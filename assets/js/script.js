@@ -13,15 +13,16 @@ function openModal(modalId) {
   const modal = document.getElementById(modalId);
   const modalContent = modal.querySelector(".modal-content");
   const modalImage = modalContent.querySelector(".modal-image");
-  const imageHeight = modalImage.naturalHeight;
 
-  // Atur tinggi modal sesuai dengan tinggi gambar sertifikat
-  modalContent.style.height = `${imageHeight + 120}px`; // Tambahkan nilai 120px untuk menyesuaikan ruang atas dan bawah
+  // Tambahkan event listener 'load' pada modalImage
+  modalImage.addEventListener("load", function () {
+    const imageHeight = this.naturalHeight;
+    modalContent.style.height = `${imageHeight}px`;
+  });
 
   modal.style.display = "block";
 }
 
-// Fungsi untuk menutup modal
 function closeModal(modalId) {
   const modal = document.getElementById(modalId);
   modal.style.display = "none";
